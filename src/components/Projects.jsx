@@ -38,10 +38,10 @@ function Projects() {
     },
     {
       number: "05",
-      title: "FIFTH AI AGENT",
+      title: "AI Test Data & Test Case Generation Agent",
       category: "Python + Devin AI",
       description:
-        "Custom enterprise automation capability supporting test workflow optimization and QA operations.",
+        "Engineered an AI-driven QA automation capability using Devin AI and Python to generate release-specific test data, test plans, and comprehensive test cases. Integrated with Jira to automate test workflow management, enhance test coverage, and streamline QA operations across enterprise releases.",
       technologies: ["Python", "Devin AI", "Automation"],
       result: "Custom enterprise automation capability",
     },
