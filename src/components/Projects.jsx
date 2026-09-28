@@ -64,7 +64,7 @@ function Projects() {
 
       <p className="section-subtitle">AI-Powered Quality Engineering</p>
       <p className="section-intro">
-        Sankeerthana built custom AI and Python automation agents using Devin AI
+        I built custom AI and Python automation agents using Devin AI
         for enterprise testing workflows, mainframe validation, and quality
         operations.
       </p>

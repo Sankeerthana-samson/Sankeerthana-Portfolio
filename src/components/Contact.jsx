@@ -2,11 +2,39 @@ import { useState } from "react";
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    setSubmitted(true);
-    event.target.reset();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setSubmitted(false);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xkjgkgqb", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Your message could not be sent. Please try again.");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch {
+      setSubmitError("Your message could not be sent. Please try again.");
+    }
   }
 
   return (
@@ -100,6 +128,12 @@ function Contact() {
           {submitted && (
             <p className="form-success">
               Thanks! Your message has been received.
+            </p>
+          )}
+
+          {submitError && (
+            <p className="form-error" role="alert">
+              {submitError}
             </p>
           )}
         </form>

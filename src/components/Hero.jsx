@@ -11,7 +11,9 @@ function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-left">
-        <p className="small-text">Senior Mainframes QE &amp; AI Automation Specialist</p>
+        <p className="small-text">
+          Senior Healthcare Mainframe Quality Lead &amp; AI Automation Specialist
+        </p>
 
         <h1>
           <span>Sankeerthana</span>
