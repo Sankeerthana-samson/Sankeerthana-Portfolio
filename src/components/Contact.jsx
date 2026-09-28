@@ -36,9 +36,9 @@ function Contact() {
           </p>
 
           <div className="contact-links">
-            <a href="mailto:sankeerthana.marupalli@email.com">
+            <a href="mailto:sankeerthanasamson777.ss@gmail.com">
               <span>Email</span>
-              <strong>sankeerthana.marupalli@email.com ↗</strong>
+              <strong>sankeerthanasamson777.ss@gmail.com ↗</strong>
             </a>
 
             <a
@@ -79,7 +79,7 @@ function Contact() {
               id="email"
               name="email"
               type="email"
-              placeholder="sankeerthana.marupalli@email.com"
+              placeholder="sankeerthanasamson777.ss@gmail.com"
               required
             />
           </div>
